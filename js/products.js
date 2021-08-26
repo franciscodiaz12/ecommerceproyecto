@@ -2,17 +2,22 @@
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 
-
+var contenedor = document.getElementsByClassName("container p-5")
 
 
 document.addEventListener("DOMContentLoaded", async function (e) {
  
+  
+
+
   var productos = (await getJSONData(PRODUCTS_URL)).data;
   const listaProductos = JSON.stringify(productos);
   var datos = JSON.parse(listaProductos);
 
   var list = document.createElement("ul");
-  document.body.appendChild(list)
+  list.
+  document.body.appendChild(list);
+  $(list).appendTo(contenedor);
   for (let i of datos) {
     var imagen = document.createElement("img");
     imagen.src = (i.imgSrc);
@@ -23,8 +28,8 @@ document.addEventListener("DOMContentLoaded", async function (e) {
     
   }
 
- 
- 
+  
+  
   
 
 
