@@ -3,7 +3,14 @@
 //elementos HTML presentes.
 
 
+
+function ingresar() {
+    localStorage.setItem("ingresado", "true");
+}
+
 document.addEventListener("DOMContentLoaded", function(e){
-   var boton =  document.getElementById("boton")
-    boton.onclick= window.localStorage.setItem("usuario", "ingresado")
+    
+    var boton =  document.getElementById("boton");
+    boton.onclick = ingresar();
+    
 });
