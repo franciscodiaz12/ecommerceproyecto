@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-08-28T05:50:45.361Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36" etag="RMxgZtDzzicKlIJA6RN4" version="15.0.3" type="github">
+<mxfile host="app.diagrams.net" modified="2021-08-28T05:51:01.195Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36" etag="lc7KokITBdBr2KPyt1tN" version="15.0.3" type="github">
   <diagram id="w0npDAH6z72HC8jlwonM" name="Page-1">
     <mxGraphModel dx="909" dy="275" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="413" pageHeight="583" math="0" shadow="0">
       <root>
@@ -167,7 +167,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="hOmsVNQkvZhFKAS-2KxV-81" value="Usuario puede preguntar sobre articulo a" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="800" y="460" width="227" height="28" as="geometry" />
+          <mxGeometry x="800" y="460" width="230" height="28" as="geometry" />
         </mxCell>
         <mxCell id="hOmsVNQkvZhFKAS-2KxV-82" value="" style="endArrow=classic;startArrow=classic;html=1;entryX=0.375;entryY=1.014;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="hOmsVNQkvZhFKAS-2KxV-1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
