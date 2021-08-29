@@ -43,20 +43,16 @@ var getJSONData = function(url){
     });
 }
 
-var urlActual = window.location.href
+
 
 function redireccionar() {
-  if ((localStorage.getItem("ingresado") !== "true" ) && (urlActual !== ("file:///C:/Users/Admin.DESKTOP-HT5Q6EV/Documents/GitHub/ecommerceproyecto/login.html")))
+  if ((localStorage.getItem("ingresado") !== "true" ) && (window.location.href !== ("file:///C:/Users/Admin.DESKTOP-HT5Q6EV/Documents/GitHub/ecommerceproyecto/login.html")))
   {
   window.location.assign("file:///C:/Users/Admin.DESKTOP-HT5Q6EV/Documents/GitHub/ecommerceproyecto/login.html");
   }
 }
 
 
-
-//Función que se ejecuta una vez que se haya lanzado el evento de
-//que el documento se encuentra cargado, es decir, se encuentran todos los
-//elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e){
   
   redireccionar();
