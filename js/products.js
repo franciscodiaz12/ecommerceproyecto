@@ -5,39 +5,41 @@
 var contenedor = document.getElementsByClassName("container p-5")
 
 
+
+
 document.addEventListener("DOMContentLoaded", async function (e) {
  
    var productos = (await getJSONData(PRODUCTS_URL)).data;
+   var lista = document.createElement("ul");
+   var imagen = document.createElement("img");
 
-  var lista = document.createElement("ul");
-  lista.style.alignContent = "left";
-  lista.style["list-style-type"]= "none";
-  lista.style.fontSize = "large";
-  lista.style.fontFamily = "Arial, Helvetica, sans-serif";
-  document.body.appendChild(lista);
-  $(lista).appendTo(contenedor);
   for (let i of productos) {
-    var imagen = document.createElement("img");
-    imagen.src = (i.imgSrc);
+   
+   
+    var valores = document.createElement("li");
+    //if (i.cost === 12500) {
+    valores.innerHTML =  "<img src=\"" + (i.imgSrc) + "\" style=width:500px>"  + "</br>" + "<span style='font-weight: bold;'>Nombre: </span>"   + (i.name) + "</br>" + "<span style='font-weight: bold;'>Descripción: </span>" + (i.description) + "</br>" + "<span style='font-weight: bold;'>Costo: </span>" + (i.cost) + " " + (i.currency) + "</br>"  + "<span style='font-weight: bold;'>Vendidos: </span>" + (i.soldCount)
+    //}
+    document.body.appendChild(lista);
+    $(lista).appendTo(contenedor);
+    lista.appendChild(imagen);
+    lista.appendChild(valores);
+    lista.style.alignContent = "left";
+    lista.style["list-style-type"]= "none";
+    lista.style.fontSize = "large";
+    lista.style.fontFamily = "Arial, Helvetica, sans-serif";
     imagen.style["max-width"]= "60%";
     imagen.style["border-radius"]= "10px";
     imagen.style["color"]= "black";
-    var objeto = document.createElement("li");
-    objeto.style.padding = "30px"
-    objeto.innerHTML = "<span style='font-weight: bold;'>Nombre: </span>"   + (i.name) + "</br>" + "<span style='font-weight: bold;'>Descripción: </span>" + (i.description) + "</br>" + "<span style='font-weight: bold;'>Costo: </span>" + (i.cost) + " " + (i.currency) + "</br>"  + "<span style='font-weight: bold;'>Vendidos: </span>" + (i.soldCount)
-   lista.appendChild(imagen);
-    lista.appendChild(objeto);
+    valores.style.padding = "30px";
+
     
-  }
+    }
 
+    
+ 
+
+ 
   
-  
-  
-
-
-
-
-
-
 });
 
