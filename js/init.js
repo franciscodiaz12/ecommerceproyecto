@@ -46,9 +46,9 @@ var getJSONData = function(url){
 
 
 function redireccionar() {
-  if ((localStorage.getItem("ingresado") !== "true" ) && (window.location.href !== ("file:///C:/Users/Admin.DESKTOP-HT5Q6EV/Documents/GitHub/ecommerceproyecto/login.html")))
+  if ((localStorage.getItem("ingresado") !== "true" ) && (window.location.href !== ("login.html")))
   {
-  window.location.assign("file:///C:/Users/Admin.DESKTOP-HT5Q6EV/Documents/GitHub/ecommerceproyecto/login.html");
+  window.location.href = ("login.html");
   }
 }
 
