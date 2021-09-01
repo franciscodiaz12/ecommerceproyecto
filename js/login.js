@@ -8,9 +8,12 @@ function ingresar() {
     localStorage.setItem("ingresado", "true");
 }
 
+
+
 document.addEventListener("DOMContentLoaded", function(e){
     
     var boton =  document.getElementById("boton");
-    boton.onclick = ingresar();
+boton.onclick = ingresar();
+boton.onclick = window.location.href = "index.html"
     
 });
