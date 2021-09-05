@@ -10,10 +10,25 @@ function ingresar() {
 
 
 
+
+
+var boton =  document.getElementById("boton");
+
+
+
+boton.onclick = function() {
+    ingresar();
+    var username = document.getElementById('uname').value;
+
+  localStorage.setItem("currentloggedin",username);
+
+}
+
+
+
 document.addEventListener("DOMContentLoaded", function(e){
     
-    var boton =  document.getElementById("boton");
-boton.onclick = ingresar();
-boton.onclick = window.location.href = "index.html"
+    var uDisplay = document.getElementById("usuarioDisplay")
+    uDisplay.innerHTML = " "
     
 });
