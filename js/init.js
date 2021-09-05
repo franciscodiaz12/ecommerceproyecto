@@ -54,7 +54,7 @@ var getJSONData = function(url){
 function redireccionar() {
   if ((localStorage.getItem("ingresado") !== "true" ) && (window.location.href !== ("login.html")))
   {
-  window.location.href = ("login.html");
+  window.location.href = ("/");
   }
 }
 
