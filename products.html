@@ -30,6 +30,31 @@
         <hr>
         <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
       </div>
+
+      <p> Ordenar por precio:</p>
+      <div style="align-content: center;">
+        <input type="radio" id="ascendente" name="drone" value="ascendente"
+               checked>
+        <label for="ascendente">Ascendente: </label>
+     
+        <input type="radio" id="descendente" name="drone" value="descendente">
+        <label for="descendente">Descendente: </label>
+      </div>
+      
+     
+
+      <div>
+        <input type="radio" id="relevancia" name="drone" value="relevancia">
+        <label for="relevancia">Ordenar por relevancia:</label>
+      </div>
+
+      <form class = "rango">
+        <label for="minimo">Minimo:</label><br>
+        <input type="number" id="minimo" name="minimo"><br>
+        <label for="maximo"> maximo:</label><br>
+        <input type="number" id="maximo" name="maximo">
+        <input type="button" value = "establecer rango" id = "rango">
+      </form>
     </div>
     <footer class="text-muted bg-light">
       <div class="container">
