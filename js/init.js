@@ -52,9 +52,9 @@ var getJSONData = function(url){
 
 
 function redireccionar() {
-  if ((localStorage.getItem("ingresado") !== "true" ) && (window.location.href !== ("login.html")))
+  if ((localStorage.getItem("ingresado") !== "true" ) && (window.location.href !== ("/ecommerceproyecto/login")))
   {
-  document.location.href = ("login.html");
+  document.location.href = ("/ecommerceproyecto/login");
   }
 }
 
