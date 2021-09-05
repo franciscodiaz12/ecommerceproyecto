@@ -10,6 +10,12 @@ const CART_BUY_URL = "https://japdevdep.github.io/ecommerce-api/cart/buy.json";
 
 
 
+var contenedorSuperior = document.getElementsByClassName("container d-flex flex-column flex-md-row justify-content-between");
+
+
+
+
+
 var showSpinner = function(){
   document.getElementById("spinner-wrapper").style.display = "block";
 }
@@ -56,6 +62,18 @@ function redireccionar() {
 document.addEventListener("DOMContentLoaded", function(e){
   
   redireccionar();
+ 
+  var usuarioDisplay = document.createElement("p");
+  usuarioDisplay.innerHTML = localStorage.currentloggedin;
+  usuarioDisplay.className = "py-2 d-none d-md-inline-block";
+  usuarioDisplay.id = "usuarioDisplay"
+  usuarioDisplay.style["color"] = "white";
+  usuarioDisplay.style["border-style"] = "solid"
+  document.body.appendChild(usuarioDisplay);
+  $(usuarioDisplay).appendTo(contenedorSuperior);
   
+  
+  
+  //<b class="" id= "nombreUsuario">  test</b>
   
 });
