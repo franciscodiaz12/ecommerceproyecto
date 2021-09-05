@@ -6,7 +6,7 @@
 
 function ingresar() {
     localStorage.setItem("ingresado", "true");
-    document.location.href = (" ");
+    window.location.replace('/');
 }
 
 
