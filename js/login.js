@@ -6,10 +6,9 @@
 
 function ingresar() {
     localStorage.setItem("ingresado", "true");
-    window.location.replace('/');
+  
+
 }
-
-
 
 
 
@@ -20,9 +19,8 @@ var boton =  document.getElementById("boton");
 boton.onclick = function() {
     ingresar();
     var username = document.getElementById('uname').value;
-
-  localStorage.setItem("currentloggedin",username);
-
+    localStorage.setItem("currentloggedin",username);
+    window.location.href = "../";
 }
 
 
