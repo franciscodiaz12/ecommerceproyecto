@@ -13,9 +13,6 @@ const CART_BUY_URL = "https://japdevdep.github.io/ecommerce-api/cart/buy.json";
 var contenedorSuperior = document.getElementsByClassName("container d-flex flex-column flex-md-row justify-content-between");
 
 
-
-
-
 var showSpinner = function(){
   document.getElementById("spinner-wrapper").style.display = "block";
 }
@@ -74,6 +71,5 @@ document.addEventListener("DOMContentLoaded", function(e){
   
   
   
-  //<b class="" id= "nombreUsuario">  test</b>
   
 });
