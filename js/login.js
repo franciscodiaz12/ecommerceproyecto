@@ -10,11 +10,7 @@ function ingresar() {
 
 }
 
-
-
 var boton =  document.getElementById("boton");
-
-
 
 boton.onclick = function() {
     ingresar();
