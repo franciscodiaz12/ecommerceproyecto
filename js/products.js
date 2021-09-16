@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", async function (e) {
   for ( i of productos) {
     
     var valores = document.createElement("li");
-    valores.innerHTML =  "<img src=\"" + (i.imgSrc) + "\" style=width:500px>"  + "</br>" + "<span style='font-weight: bold;'>Nombre: </span>"   + (i.name) + "</br>" + "<span style='font-weight: bold;'>Descripción: </span>" + (i.description) + "</br>" + "<span style='font-weight: bold;'>Costo: </span>" + (i.cost) + " " + (i.currency) + "</br>"  + "<span style='font-weight: bold;'>Vendidos: </span>" + (i.soldCount)
+    valores.innerHTML =  "<img src=\"" + (i.imgSrc) + "\" style=width:500px >"  + "</br>" + "<span style='font-weight: bold;'>Nombre: </span>"   + (i.name) + "</br>" + "<span style='font-weight: bold;'>Descripción: </span>" + (i.description) + "</br>" + "<span style='font-weight: bold;'>Costo: </span>" + (i.cost) + " " + (i.currency) + "</br>"  + "<span style='font-weight: bold;'>Vendidos: </span>" + (i.soldCount)
     
     document.body.appendChild(lista);
     $(lista).appendTo(contenedor);
@@ -43,9 +43,11 @@ document.addEventListener("DOMContentLoaded", async function (e) {
     lista.style.fontSize = "large";
     lista.style.fontFamily = "Arial, Helvetica, sans-serif";
     valores.style.padding = "30px";
-
-  }
- 
+    valores.onclick = function() {
+      window.location.href = "product-info.html";
+   } 
+   }
+  
   
  
     rangoBoton.onclick = function() {
@@ -64,13 +66,6 @@ document.addEventListener("DOMContentLoaded", async function (e) {
 
    }
 
-  //lista.innerHTML = " "
-  //productos.sort(function(a, b){return a.cost-b.cost});
-  //for ( i of productos) {
-  // var valores = document.createElement("li");
-  //valores.innerHTML =  "<img src=\"" + (i.imgSrc) + "\" style=width:500px>"  + "</br>" + "<span style='font-weight: bold;'>Nombre: </span>"   + (i.name) + "</br>" + "<span style='font-weight: bold;'>Descripción: </span>" + (i.description) + "</br>" + "<span style='font-weight: bold;'>Costo: </span>" + (i.cost) + " " + (i.currency) + "</br>"  + "<span style='font-weight: bold;'>Vendidos: </span>" + (i.soldCount)
-  //}
-  //lista.appendChild(valores);
 
 precioAscendente.onclick = function() {
  
