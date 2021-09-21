@@ -1,32 +1,13 @@
 var producto = document.getElementById("producto")
 var comentarios = document.getElementById("comentarios")
-var imagen = document.createElement("img")
 var enviar = document.getElementById("enviar")
 var puntuacion = document.getElementById("puntuacion")
 var descripcion = document.getElementById("descripcion")
+var productosRelacionados = document.getElementById("productosRelacionados")
 
 let today = new Date().toLocaleDateString()
 
-/**function showImagesGallery(array){
 
-    let htmlContentToAppend = "";
-  
-
-    for(i of array){
-        htmlContentToAppend = `
-        <div class="col-lg-3 col-md-4 col-6" align="justify">
-           
-                <img  src="` + i + `"  style="width:300px; float: right">      
-        </div>
-        `
-
-
-producto.innerHTML += htmlContentToAppend
-        
-    }
-    
-}
- */
 
 function showImagesGallery(array){
   var contenedor = document.createElement("div")
@@ -61,7 +42,12 @@ producto.innerHTML += `<b style="font-size:160%;">`+  (infoProducto.name)+ ` </b
 "<b>Vendidos: </b>"    + (infoProducto.soldCount) + "</br>" + "</br>" +
 "<b>Categoria: </b>"    + (infoProducto.category) + "</br>" + "</br>" 
 showImagesGallery(infoProducto.images) + "</br>"  
-producto.innerHTML += "</br>" + "<b>Productos relacionados: </b>"    + (infoProducto.relatedProducts) + "</br>" ;
+
+
+
+
+
+//producto.innerHTML += "</br>" + "<b>Productos relacionados: </b>"    + (infoProducto.relatedProducts) + "</br>" ;
 
 
 var infoComentarios = (await getJSONData(PRODUCT_INFO_COMMENTS_URL)).data;
@@ -93,6 +79,13 @@ enviar.onclick = function () {
     document.body.appendChild(comentario)
 comentarios.appendChild(comentario)
 
+}
+
+var productos = (await getJSONData(PRODUCTS_URL)).data;
+
+for (i of infoProducto.relatedProducts) {
+    
+  productosRelacionados.innerHTML += "<img src=\"" + (productos[i].imgSrc) + "\" style=width:200px >" + (productos[i].name) + (productos[i].cost)
 }
 
 
