@@ -59,17 +59,42 @@ function redireccionar() {
 document.addEventListener("DOMContentLoaded", function(e){
   
   redireccionar();
+
+
  
-  var usuarioDisplay = document.createElement("p");
-  usuarioDisplay.innerHTML = localStorage.currentloggedin;
+  var usuarioDisplay = document.createElement("div");
+  let htmlContentToAppend = ""
+  
+  htmlContentToAppend += `
+  <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   ` + localStorage.currentloggedin + `
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="cart.html">Ver mi carrito</a>
+    <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
+    <button class="dropdown-item" id= "cerrarSesion" onclick="windlocalStorage.currentloggedin">Cerrar sesión</button>
+  </div>
+</div>
+
+
+`
+usuarioDisplay.innerHTML += htmlContentToAppend
+
+
+
+;
   usuarioDisplay.className = "py-2 d-none d-md-inline-block";
   usuarioDisplay.id = "usuarioDisplay"
   usuarioDisplay.style["color"] = "white";
-  usuarioDisplay.style["border-style"] = "solid"
   document.body.appendChild(usuarioDisplay);
   $(usuarioDisplay).appendTo(contenedorSuperior);
   
-  
-  
+  var cerrarSesion = document.getElementById("cerrarSesion")
+  cerrarSesion.onclick = function() {
+    localStorage.clear("currentloggedin") 
+    window.location.replace("login.html")
+  }
   
 });
+
