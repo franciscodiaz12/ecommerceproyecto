@@ -47,9 +47,6 @@ showImagesGallery(infoProducto.images) + "</br>"
 
 
 
-//producto.innerHTML += "</br>" + "<b>Productos relacionados: </b>"    + (infoProducto.relatedProducts) + "</br>" ;
-
-
 var infoComentarios = (await getJSONData(PRODUCT_INFO_COMMENTS_URL)).data;
 
 for (i of infoComentarios) {
@@ -85,7 +82,8 @@ var productos = (await getJSONData(PRODUCTS_URL)).data;
 
 for (i of infoProducto.relatedProducts) {
     
-  productosRelacionados.innerHTML += "<img src=\"" + (productos[i].imgSrc) + "\" style=width:200px >" + (productos[i].name) + (productos[i].cost)
+  productosRelacionados.innerHTML += "<div  style=" + "color:blue;" + ">"  + "<img class="+"img-thumbnail"+" src=" + (productos[i].imgSrc) + " style=width:200px >" + (productos[i].name) + (productos[i].cost) + "<div>"
+  productosRelacionados.maxHeight = "15px";
 }
 
 
